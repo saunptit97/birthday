@@ -16,46 +16,48 @@
 <!--
 .STYLE1 {color: #666666}
 -->
-        </style>
+</style>
+
+    <script>
+    function play(){
+        var audio =  document.getElementById("audio");
+        audio.play();
+    }
+</script>
 </head>
     <body>
-        <script>
-            function play(){
-                var audio =  document.getElementById("audio");
-                audio.play();
-            }
-        </script>
-             <audio id="audio" src="Han.mp3" type="audio/mpeg">
-            </audio>
         <div id="main">
-             <div id="wrap">
-                <div id="text">
-                    <div id="code">
-                  <font color="#0000FF"><span class="say">Chào em yêu,</span><br>
-                        <span class="say"> </span><br>
-                        <span class="say">Em là người con gái anh yêu nhất :)</span><br>
-                        <span class="say">Em xinh đẹp nhất !</span><br>
-                        <span class="say">Em đáng yêu nhất !</span><br>
-                        <span class="say">Em cũng yêu anh nhất !</span><br>
-                        <span class="say">Em là một điều may mắn trong cuộc sống của anh</span><br>
-                        <span class="say">..."Có em, anh sẽ chẳng cần điều gì khác em"</span><br>
-                        <span class="say">Yêu em cho đến khi nào anh không còn tồn tại <3</span><br>
-                        <span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là hôn lễ' :*</span><br>
-                        <span class="say"> </span><br>
-                        <span class="say"><span class="space"></span> -- Yêu em thật nhiều --</span>
-              </font></p>
-      </div>
-                </div>
-                <div id="clock-box">
-                    <span class="STYLE1"></span><font color="#FF0000">Anh <3 Em</font>
-<span class="STYLE1"> Time of love...</span>
-                  <div id="clock"></div>
-              </div>
-                <canvas id="canvas" width="1100" height="680" onclick="play()"></canvas>
+            <div id="first"></div>
+            <div id="second">
+                <audio id="audio" src="Han.mp3" type="audio/mpeg"></audio>
+                <div id="main">
+                    <div id="wrap">
+                        <div id="text">
+                            <div id="code">
+                                 <font color="#b90000"><span class="say">Chào em yêu,</span><br>
+                                    <span class="say"> </span><br>
+                                    <span class="say">Em là người con gái anh yêu nhất :)</span><br>
+                                    <span class="say">Em xinh đẹp nhất !</span><br>
+                                    <span class="say">Em đáng yêu nhất !</span><br>
+                                    <span class="say">Em cũng yêu anh nhất !</span><br>
+                                    <span class="say">Em là một điều may mắn trong cuộc sống của anh</span><br>
+                                    <span class="say">..."Có em, anh sẽ chẳng cần điều gì khác ngoài em"</span><br>
+                                    <span class="say">Yêu em cho đến khi nào anh không còn tồn tại <3</span><br>
+                                    <span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là hôn lễ' :*</span><br>
+                                    <span class="say"> </span><br>
+                                    <span class="say"><span class="space"></span> -- Yêu em thật nhiều --</span>
+                                 </font>
+                            </div>
+                        </div>
+                        <div id="clock-box">
+                            <span class="STYLE1"></span><font color="#FF0000" class="bold" class="bold">Anh <3 Em </font>
+                            <span id="cl-080606"> Time of love...</span>
+                            <div id="clock"></div>
+                        </div>
+                        <canvas id="canvas" width="1100" height="680" onclick="play()"></canvas>
+                    </div></div>
             </div>
-            
         </div>
-    
     <script>
     </script>
 
@@ -168,8 +170,8 @@
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
 
-            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
+             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            // canvas.css("background", "#ffe");
             $await(Jscex.Async.sleep(300));
             canvas.css("background", "none");
         }));
