@@ -1,47 +1,49 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="icon" type="image/png" href="image/favicon.jpg">
-		<title>Anh <3 Em</title>	    
+        <link rel="icon" type="image/png" href="image/favicon.jpg">
+        <title>Anh <3 Em</title>        
         <link type="text/css" rel="stylesheet" href="./renxi/default.css">
-		<script type="text/javascript" src="./renxi/jquery.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-parser.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-jit.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-builderbase.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-async.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-async-powerpack.min.js"></script>
-		<script type="text/javascript" src="./renxi/functions.js" charset="utf-8"></script>
-		<script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
-	    <style type="text/css">
+        <script type="text/javascript" src="./renxi/jquery.min.js"></script>
+        <script type="text/javascript" src="./renxi/jscex.min.js"></script>
+        <script type="text/javascript" src="./renxi/jscex-parser.js"></script>
+        <script type="text/javascript" src="./renxi/jscex-jit.js"></script>
+        <script type="text/javascript" src="./renxi/jscex-builderbase.min.js"></script>
+        <script type="text/javascript" src="./renxi/jscex-async.min.js"></script>
+        <script type="text/javascript" src="./renxi/jscex-async-powerpack.min.js"></script>
+        <script type="text/javascript" src="./renxi/functions.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
+        <style type="text/css">
 <!--
 .STYLE1 {color: #666666}
 -->
         </style>
 </head>
     <body>
-		
-            <audio autoplay="true" loop>
-                  <source src="AsLongAsYouLoveMe.mp3" type="audio/mpeg">
-            </audio>
-             <audio controls="" src="AsLongAsYouLoveMe.mp3" type="audio/mpeg">
+        <script>
+            function play(){
+                var audio =  document.getElementById("audio");
+                audio.play();
+            }
+        </script>
+             <audio id="audio" src="Han.mp3" type="audio/mpeg">
             </audio>
         <div id="main">
              <div id="wrap">
                 <div id="text">
-			        <div id="code">
-			      <font color="#0000FF"><span class="say">Chào em yêu,</span><br>
-						<span class="say"> </span><br>
-						<span class="say">Em là người con gái anh yêu nhất :)</span><br>
-						<span class="say">Em xinh đẹp nhất !</span><br>
-						<span class="say">Em đáng yêu nhất !</span><br>
-						<span class="say">Em cũng yêu anh nhất !</span><br>
-						<span class="say">Em là một điều may mắn trong cuộc sống của anh</span><br>
-						<span class="say">..."Có em, anh sẽ chẳng cần điều gì khác em"</span><br>
-						<span class="say">Yêu em cho đến khi nào anh không còn tồn tại <3</span><br>
-						<span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là hôn lễ' :*</span><br>
-						<span class="say"> </span><br>
+                    <div id="code">
+                  <font color="#0000FF"><span class="say">Chào em yêu,</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">Em là người con gái anh yêu nhất :)</span><br>
+                        <span class="say">Em xinh đẹp nhất !</span><br>
+                        <span class="say">Em đáng yêu nhất !</span><br>
+                        <span class="say">Em cũng yêu anh nhất !</span><br>
+                        <span class="say">Em là một điều may mắn trong cuộc sống của anh</span><br>
+                        <span class="say">..."Có em, anh sẽ chẳng cần điều gì khác em"</span><br>
+                        <span class="say">Yêu em cho đến khi nào anh không còn tồn tại <3</span><br>
+                        <span class="say">Hãy cứ tin em nhé. 'Ta sẽ có một chuyến đi thật dài và đích đến là hôn lễ' :*</span><br>
+                        <span class="say"> </span><br>
                         <span class="say"><span class="space"></span> -- Yêu em thật nhiều --</span>
-			  </font></p>
+              </font></p>
       </div>
                 </div>
                 <div id="clock-box">
@@ -49,7 +51,7 @@
 <span class="STYLE1"> Time of love...</span>
                   <div id="clock"></div>
               </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
+                <canvas id="canvas" width="1100" height="680" onclick="play()"></canvas>
             </div>
             
         </div>
@@ -60,7 +62,7 @@
     <script>
     (function(){
         var canvas = $('#canvas');
-		
+        
         if (!canvas[0].getContext) {
             $("#error").show();
             return false;        }
@@ -145,14 +147,14 @@
 
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
-    	        tree.grow();
+                tree.grow();
                 $await(Jscex.Async.sleep(10));
             } while (tree.canGrow());
         }));
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
-    	        tree.flower(2);
+                tree.flower(2);
                 $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
@@ -183,14 +185,14 @@
         }));
 
         var textAnimate = eval(Jscex.compile("async", function () {
-		    var together = new Date();
-		    together.setFullYear(2017,8,2); 			
-		    together.setHours(0);							
-		    together.setMinutes(0);				
-		    together.setSeconds(0);					
-		    together.setMilliseconds(0);			
+            var together = new Date();
+            together.setFullYear(2017,8,2);             
+            together.setHours(0);                           
+            together.setMinutes(0);             
+            together.setSeconds(0);                 
+            together.setMilliseconds(0);            
 
-		    $("#code").show().typewriter();
+            $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);
